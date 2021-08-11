@@ -1,6 +1,21 @@
 #include <stdio.h>
 #include <string.h>
 
+
+
+void cabecalho() {
+  printf("********\n");
+  printf(" Jogo de Forca \n");
+  printf("********\n");
+}
+
+void chuta(char chutes[26], int tentativas) {
+    char chute;
+    scanf(" %c", &chute);
+    
+    chutes[tentativas] = chute;
+}
+
 int main() {
   char palavra_secreta[20];
 
@@ -12,7 +27,8 @@ int main() {
   char chutes[26];
   int tentativas = 0;
 
-
+  cabecalho();
+  
   do {
     for(int i = 0; i < strlen(palavra_secreta); i++) {
 
@@ -35,11 +51,8 @@ int main() {
   
     printf("\n");
 
-    char chute;
-    scanf(" %c", &chute);
-    
-    chutes[tentativas] = chute; 
+    chuta(chutes, tentativas);
     tentativas++;
-
+    
   } while(!acertou && !enforcou);
 }
