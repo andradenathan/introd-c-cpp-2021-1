@@ -15,9 +15,11 @@ int main() {
   double porcentagem_candidato04 = 0.0; 
   double porcentagem_nulos = 0.0;
   double porcentagem_brancos = 0.0;
-  char continuar;
 
-  while(1) {
+  printf("Selecione o candidato para votar (1/2/3/4) e (5/6 para nulo ou branco): ");
+  scanf("%d", &voto);
+
+  while(voto != 0) {
     printf("Selecione o candidato para votar (1/2/3/4) e (5/6 para nulo ou branco): ");
     scanf("%d", &voto);
     
@@ -50,11 +52,6 @@ int main() {
       qtd_votos_brancos++;
       porcentagem_brancos = qtd_votos_brancos / 6.0;
     }
-
-    printf("Deseja continuar votando? [S/N]: ");
-    scanf(" %c", &continuar);
-
-    if(continuar == 'N' || continuar == 'n') break;
   }
 
   printf("Candidato 1: %d voto(s)\n", qtd_votos_candidato01);
