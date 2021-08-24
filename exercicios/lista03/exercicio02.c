@@ -9,7 +9,7 @@
 
 int main(void) {
   int vetor[DIM];
-  int elem, temp, index, flag = 0;
+  int elem, aux = 0;
 
   for (int i = 0; i < DIM; i++) {
     printf("Insira um numero na posicao [%d]: ", i);
@@ -21,11 +21,11 @@ int main(void) {
   
   for (int j = 0; j < DIM; j++) {
     if (elem == vetor[j]) {
-      flag = 1;
+      aux = 1;
     }
   }
 
-  if(flag == 1) {
+  if(aux == 1) {
     printf("O numero %d esta presente no vetor\n", elem);
     return 0;
   } else {
