@@ -11,12 +11,21 @@
 int main(void) {
   char palavra[MAX_LENGTH];
   char palavra_tras_pra_frente[MAX_LENGTH];
-  int contador, inicio, fim = 0;
+  int contador, inicio = 0, fim = 0, tam = 0;
 
-  printf("Insira uma string de ate %d caracteres: ", MAX_LENGTH);
+  printf("Insira uma palavra de ate %d caracteres: ", MAX_LENGTH);
   fgets(palavra, MAX_LENGTH, stdin);
-  
-  printf("A nova palavra e: %s\n", palavra);
+
+  for(int i = 0; i < MAX_LENGTH; i++) {
+    if(palavra[i] == '\0') break;
+    tam++;
+  }
+
+  for(int j = tam - 1; j >= 0; j--) {
+    palavra_tras_pra_frente[inicio] = palavra[j];
+    inicio++;
+  }
+  printf("A nova palavra e: %s\n", palavra_tras_pra_frente);
 
   return 0;
 }
