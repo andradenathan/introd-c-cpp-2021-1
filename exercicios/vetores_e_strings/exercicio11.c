@@ -10,19 +10,13 @@
 
 int main(void) {
   char palavra[MAX_LENGTH];
-  int tamanho = 0;
+  char palavra_tras_pra_frente[MAX_LENGTH];
+  int contador, inicio, fim = 0;
 
   printf("Insira uma string de ate %d caracteres: ", MAX_LENGTH);
   fgets(palavra, MAX_LENGTH, stdin);
   
-  for(int i = 0; i < MAX_LENGTH; i++) {
-    if(palavra[i] == '\0') {
-      break;
-    }
-
-    tamanho++;
-  }
-  printf("Tamanho da string: %d\n", tamanho - 1);
+  printf("A nova palavra e: %s\n", palavra);
 
   return 0;
 }
