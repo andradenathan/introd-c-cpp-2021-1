@@ -25,7 +25,7 @@ void girar_direita() {
 }
 
 void imprimir() {
-  printf("Posicao no momento\nDirecao: %d, X: %d, Y: %d\n", direcao, x, y);
+  printf("Posicao do Robo no momento\nDirecao: %d, X: %d, Y: %d\n", direcao, x, y);
 }
 
 void ligar() {
@@ -50,28 +50,28 @@ void ligar() {
     }
 
     else if(menu == 1) {
-      printf("Voce avancou com o Robo.\n");
+      printf("Voce avancou o Robo.\n");
       direcao = 1;
       avancar();
       printf("-------\n");
     }
 
     else if(menu == 2) {
-      printf("Voce voltou com o Robo.\n");
+      printf("Voce voltou o Robo.\n");
       direcao = 2;
       voltar();
       printf("-------\n");
     }
 
     else if(menu == 3) {
-      printf("Voce girou para esquerda com o Robo.\n");
+      printf("Voce girou para esquerda o Robo.\n");
       direcao = 3;
       girar_esquerda();
       printf("-------\n");
     }
 
     else if(menu == 4) {
-      printf("Voce girou para direita com o Robo.\n");
+      printf("Voce girou para direita o Robo.\n");
       direcao = 4;
       girar_direita();
       printf("-------\n");

@@ -29,12 +29,12 @@ void copia(char origem[], char destino[]) {
 }
 
 void concatena(char origem[], char destino[]) {
-  for(int i = 0; i < tamanho(origem); i++) {
-    concatenado[i] = origem[i];
+  for(int i = 0; i < tamanho(destino); i++) {
+    concatenado[i] = destino[i];
   }
 
-  for(int i = 0; i < tamanho(destino); i++) {
-    concatenado[i + tamanho(origem)] = destino[i];
+  for(int i = 0; i < tamanho(origem); i++) {
+    concatenado[i + tamanho(destino)] = origem[i];
   }
 }
 
@@ -52,42 +52,40 @@ int compara(char string1[], char string2[]) {
     return 0;
   }
   
-  else if(tam_str1 < tam_str2) {
-    return -1;
-  } else {
+  else if(tam_str1 < tam_str2 || tam_str1 > tam_str2) {
     return 1;
-  }
-  
+  } 
 }
 
 int main(void) {
-  char palavra[MAX_LENGTH];
-  char nova_palavra[MAX_LENGTH];
+  char palavra1[MAX_LENGTH];
   char palavra2[MAX_LENGTH];
-  
-  int tam;
+  int tam_p1;
+  int tam_p2;
 
   printf("Insira uma palavra: ");
-  fgets(palavra, MAX_LENGTH, stdin);
-  
-  tam = tamanho(palavra);
+  fgets(palavra1, MAX_LENGTH, stdin);
 
   printf("Insira outra palavra: ");
   fgets(palavra2, MAX_LENGTH, stdin);
 
-  copia(palavra, nova_palavra);
-  printf("Quantidade de caracteres da palavra: %d\n", tam);
-  printf("Original: %sCopia: %s\n", palavra, nova_palavra);
+  tam_p1 = tamanho(palavra1);
+  tam_p2 = tamanho(palavra2);
 
-  concatena(palavra, palavra2);
-  printf("Palavras concatenadas: %s\n", concatenado);
-  
- 
-  int resultado_comparacao = compara(palavra, palavra2);
-  printf("Comparacao das palavras: %d\n", resultado_comparacao);
-  
-  inverte(palavra, palavra2);
-  printf("Palavra invertida: %s", palavra2);
-  
+  printf("Tamanho da Palavra 1: %d\n", tam_p1);
+  printf("Tamanho da Palavra 2: %d\n", tam_p2);
+
+  char palavra_copiada[MAX_LENGTH];
+  copia(palavra1, palavra_copiada);
+  printf("Palavra original: %sPalavra copiada: %s\n", palavra1, palavra_copiada);
+
+  concatena(palavra1, palavra2);
+  printf("Palavra concatenada: %s\n", concatenado);
+
+  printf("Comparacao das palavras: %d\n", compara(palavra1, palavra2));
+
+  inverte(palavra1, palavra2);
+  printf("Palavra invertida: %s\n", palavra2);
+
   return 0;
 }
