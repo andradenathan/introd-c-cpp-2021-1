@@ -1,15 +1,16 @@
 #include <stdio.h>
-
-void calcula(int* c) {
-  printf("Calcula %d %d \n", (*c), c);
-  (*c)++;
-  printf("Calcula %d %d \n", (*c), c);
-}
+#include <stdlib.h>
 
 int main() {
-  int c = 10;
+  int *p, *q, numero1, numero2;
 
-  printf("Main %d %d\n", c, &c);
-  calcula(&c);
-  printf("Main %d %d\n", c, &c);
+  printf("Insira um numero: ");
+  scanf("%d %d", &numero1, &numero2);
+
+  p = &numero1;
+  q = &numero2;
+
+  printf("A soma de p + q: %d\n", *p + *q);
+
+  return 0;
 }
