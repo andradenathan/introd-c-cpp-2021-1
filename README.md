@@ -1,4 +1,4 @@
-# Disciplina de Introdução à C/C++ do BCMT feito em 2021.1.
+# Introdução à C/C++ (2021.1) - Autor: Nathan Andrade.
 Nesta disciplina os seguintes tópicos foram abordados:
 - Variáveis, tipagem e expressões
 - Entrada e Saída
