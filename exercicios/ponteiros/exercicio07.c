@@ -6,11 +6,21 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#define MAX_LENGTH 100
+
+int strtam(char string[]) {
+  int tam = 0;
+  for(int i = 0; i < MAX_LENGTH; i++) {
+    if(string[i] == '\0') break;
+    tam++;
+  }
+
+  return tam;
+}
 
 char *strcopy(char *str) {
-  char *copia = malloc(strlen(str) * sizeof(char));
-  for(int i = 0; i < strlen(str); i++) {
+  char *copia = malloc(strtam(str) * sizeof(char));
+  for(int i = 0; i < strtam(str); i++) {
     copia[i] = str[i];
   }
 
@@ -20,6 +30,6 @@ char *strcopy(char *str) {
 
 int main(void) {
   char str[] = "Nathan";
-
   *strcopy(str);
+  return 0;
 }
