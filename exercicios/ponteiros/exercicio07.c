@@ -8,13 +8,14 @@
 #include <stdlib.h>
 #define MAX_LENGTH 100
 
+char *copia;
+
 int strtam(char string[]) {
   int tam = 0;
   for(int i = 0; i < MAX_LENGTH; i++) {
     if(string[i] == '\0') break;
     tam++;
   }
-
   return tam;
 }
 
@@ -25,11 +26,12 @@ char *strcopy(char *str) {
   }
 
   printf("Original: %s\nCópia: %s\n", str, copia);
-  free(copia);
+  return copia;
 }
 
 int main(void) {
   char str[] = "Nathan";
   *strcopy(str);
+  free(copia);
   return 0;
 }
