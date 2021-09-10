@@ -10,7 +10,7 @@
 
 char *copia;
 
-int strtam(char string[]) {
+int tamstr(char string[]) {
   int tam = 0;
   for(int i = 0; i < MAX_LENGTH; i++) {
     if(string[i] == '\0') break;
@@ -20,8 +20,8 @@ int strtam(char string[]) {
 }
 
 char *strcopy(char *str) {
-  char *copia = malloc(strtam(str) * sizeof(char));
-  for(int i = 0; i < strtam(str); i++) {
+  char *copia = malloc(tamstr(str) * sizeof(char));
+  for(int i = 0; i < tamstr(str); i++) {
     copia[i] = str[i];
   }
 
