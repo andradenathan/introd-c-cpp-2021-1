@@ -20,4 +20,5 @@ int main(void) {
   for(int i = 0; i < DIM; i++) {
     printf("Vetor[%d]: %d\n", i, *(p+i));
   }
+  return 0;
 }
