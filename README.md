@@ -1,4 +1,4 @@
-# Introdução à C/C++ (2021.1) - Autor: Nathan Andrade.
+# Introdução à C/C++
 Nesta disciplina os seguintes tópicos foram abordados:
 - Variáveis, tipagem e expressões
 - Entrada e Saída
