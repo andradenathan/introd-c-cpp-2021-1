@@ -7,4 +7,3 @@ Nesta disciplina os seguintes tópicos foram abordados:
 - Função e Recursão
 - Ponteiros
 - Estruturas
-- Pseudo-objetos em C
