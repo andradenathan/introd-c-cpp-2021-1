@@ -1,4 +1,4 @@
-# Introdução à C/C++
+# Introdução à programação em C/C++
 Nesta disciplina os seguintes tópicos foram abordados:
 - Variáveis, tipagem e expressões
 - Entrada e Saída
